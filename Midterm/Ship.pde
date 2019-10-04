@@ -5,17 +5,18 @@ class Ship {
   // properties of Ships -- variables associated to ships
 
   // varibale for ship
-  float xPos;
-  float yPos;
+  float xPos1;
+  float yPos1;
   //image of spaceship
   PImage photo;
+  float wide = 70;
 
   // constructor --  this is how Ships get made
   Ship() {
 
     //position of ship
-    xPos = width/2;
-    yPos = height/2;
+    xPos1 = width/2;
+    yPos1 = height/2;
 
     //image of spaceship
     photo = loadImage("spaceship.png");
@@ -26,50 +27,57 @@ class Ship {
   void display() {
 
     //spaceship
-    image(photo, xPos, yPos);
+    imageMode(CENTER);
+    image(photo, xPos1, yPos1, 70,70);
+    //shield
+    fill(0,255,255, 70);
+    ellipse(xPos1,yPos1,83,83);
 
     //protection to keep on screen
-    if (xPos > 1500)
-    { 
-      xPos = 0;
+    if (xPos1 > 1500) { 
+      xPos1 = 0;
     }
-    if (xPos < 0) {
-      xPos = 1500;
+    if (xPos1 < 0) {
+      xPos1 = 1500;
     }
-    if (yPos < 0) {
-      yPos = 1000;
+    if (yPos1 < 0) {
+      yPos1 = 1000;
     }
-    if (yPos > 1000) {
-      yPos = 0;
+    if (yPos1 > 1000) {
+      yPos1 = 0;
     }
   }
 
   void move() {
+    
+    //if(xPos1==xPos2&&yPos1==yPos2){
+    //  println("Oh F!!!!!!!!!!");
+    //}
 
     //user controlled movement
 
     //left
     if (keyPressed) {
       if (key == 'a') {
-        xPos--;
+        xPos1 = xPos1 - 5;
       }
     }
     //up
     if (keyPressed) {
       if (key == 'w') {
-        yPos--;
+        yPos1 = yPos1 - 5;
       }
     }
     //right
     if (keyPressed) {
       if (key == 'd') {
-        xPos++;
+        xPos1 = xPos1 + 5;
       }
     }
     //down
     if (keyPressed) {
       if (key =='s') {
-        yPos++;
+        yPos1 = yPos1 + 5;
       }
     }
   }

@@ -6,11 +6,12 @@ Star [] stars;
 Ship lollipop;
 Star Tootsie;
 SmallAsteroid [] PopRocks;
+//Circle shield;
 
 void setup() {
   size(1500, 1000);
   stars = new Star[100];
-  PopRocks = new SmallAsteroid[5];
+  PopRocks = new SmallAsteroid[100];
   for (int i =0; i<stars.length; i++) {
     stars[i] = new Star();
   }
@@ -18,7 +19,7 @@ void setup() {
   for (int s =0; s<PopRocks.length; s++) {
     PopRocks[s] = new SmallAsteroid();
   }
-
+  
   lollipop = new Ship();
   Tootsie = new Star();
 }
@@ -51,5 +52,6 @@ void draw() {
 
     //moves Small Asteroids
     PopRocks[s].move();
+    PopRocks[s].collide(lollipop);
   }
 }

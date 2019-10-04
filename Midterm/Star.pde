@@ -12,11 +12,12 @@ class Star {
   }
 
   void display() {
+    fill(255);
     ellipse(x, y, 10, 10);
   }
 
   void move() {
-    y = y + 6;
+    y = y + 2;
     if (y > 1000) {
       y = 0;
       x = random(width);
