@@ -6,7 +6,7 @@ Star [] stars;
 Ship lollipop;
 Star Tootsie;
 SmallAsteroid [] PopRocks;
-//Circle shield;
+
 
 void setup() {
   size(1500, 1000);

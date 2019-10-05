@@ -49,10 +49,6 @@ class Ship {
   }
 
   void move() {
-    
-    //if(xPos1==xPos2&&yPos1==yPos2){
-    //  println("Oh F!!!!!!!!!!");
-    //}
 
     //user controlled movement
 

@@ -36,7 +36,6 @@ class SmallAsteroid {
   void collide(Ship lollipop) {
     if (dist(lollipop.xPos1, lollipop.yPos1, xPos2, yPos2)<wide/2+lollipop.wide/2-3)
     println("IT WORKS");
-    //if (ship.xPos1==xPos2&&ship.yPos1==yPos2){   
     }
     
 }
