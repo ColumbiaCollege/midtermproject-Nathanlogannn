@@ -6,7 +6,7 @@ Star [] stars;
 Ship lollipop;
 Star Tootsie;
 SmallAsteroid [] PopRocks;
-
+boolean Loser = false;
 
 void setup() {
   size(1500, 1000);
@@ -19,7 +19,7 @@ void setup() {
   for (int s =0; s<PopRocks.length; s++) {
     PopRocks[s] = new SmallAsteroid();
   }
-  
+
   lollipop = new Ship();
   Tootsie = new Star();
 }
@@ -36,10 +36,12 @@ void draw() {
     stars[i].display();
 
     //moves Stars
+     if (!Loser) 
     stars[i].move();
   }
 
   //moves Ship
+   if (!Loser) 
   lollipop.move();
 
   //displays ship
@@ -51,7 +53,18 @@ void draw() {
     PopRocks[s].display();
 
     //moves Small Asteroids
-    PopRocks[s].move();
-    PopRocks[s].collide(lollipop);
+    if (!Loser) {
+      PopRocks[s].move();
+      PopRocks[s].collide(lollipop);
+    }
   }
+  if (Loser==true) {
+    //(dist(lollipop.xPos1, lollipop.yPos1, xPos2, yPos2)<wide/2+lollipop.wide/2-3)
+    textAlign(CENTER);
+    textSize(80);
+    fill(255, 0, 0);
+    text("GAME OVER", 750, 500);
+  }
+  //if (Loser==false) {
+  //}
 }
