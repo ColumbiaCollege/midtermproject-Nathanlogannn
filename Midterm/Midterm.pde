@@ -5,7 +5,6 @@
 //arrays and classes implemented
 Star [] stars;
 Ship lollipop;
-Star Tootsie;
 SmallAsteroid [] PopRocks;
 
 //lose condition boolean
@@ -27,7 +26,6 @@ void setup() {
   }
 
   lollipop = new Ship();
-  Tootsie = new Star();
 }
 
 
