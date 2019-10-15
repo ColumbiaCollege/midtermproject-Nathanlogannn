@@ -16,6 +16,7 @@ class SmallAsteroid {
     xPos2 = random(width);
     yPos2 = random(-5000, -300);
 
+    //image of asteroids
     photo = loadImage("smallasteroids.png");
   }
 
@@ -26,23 +27,20 @@ class SmallAsteroid {
   }
 
   void move() {
+
+    //random placement of asteroids within a -5000 to -300 y axis position
     yPos2 = yPos2 + 5;
     if (yPos2 > 1000) {
       yPos2 = random(-5000, -300);
       xPos2 = random(width);
     }
-    //yPos2 = yPos2 + 0;
-    //if (yPos2 = collide);
   }
-  
+
+  //collision condition
   void collide(Ship lollipop) {
     if (dist(lollipop.xPos1, lollipop.yPos1, xPos2, yPos2)<wide/2+lollipop.wide/2-3)
-    //    textAlign(CENTER);
-    //textSize(80);
-    //fill(255,0,0);
-    //text("GAME OVER", 750, 500);
-    Loser= true;
-    //yPos2 = yPos2 + 0;
-    //if (yPos2 = collide);
-    }
+
+      //lose condition/boolean
+      Loser= true;
+  }
 }

@@ -11,11 +11,13 @@ class Star {
     y = random(height);
   }
 
+  //displays the random distribution of stars within the background
   void display() {
     fill(255);
     ellipse(x, y, 10, 10);
   }
 
+  //moves the array of stars in the background
   void move() {
     y = y + 2;
     if (y > 1000) {
