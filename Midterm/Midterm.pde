@@ -12,7 +12,9 @@ boolean Loser = false;
 
 void setup() {
   size(1500, 1000);
+  //array of how many stars
   stars = new Star[100];
+  //array of how many asteroids
   PopRocks = new SmallAsteroid[100];
 
   //array for stars in background
@@ -25,6 +27,7 @@ void setup() {
     PopRocks[s] = new SmallAsteroid();
   }
 
+  //Ship implementation in the setup
   lollipop = new Ship();
 }
 
