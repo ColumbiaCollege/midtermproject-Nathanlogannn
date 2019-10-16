@@ -28,10 +28,10 @@ class Ship {
 
     //spaceship
     imageMode(CENTER);
-    image(photo, xPos1, yPos1, 70,70);
+    image(photo, xPos1, yPos1, 70, 70);
     //shield
-    fill(0,255,255, 70);
-    ellipse(xPos1,yPos1,83,83);
+    fill(0, 255, 255, 70);
+    ellipse(xPos1, yPos1, 83, 83);
 
     //protection to keep on screen
     if (xPos1 > 1500) { 
