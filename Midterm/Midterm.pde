@@ -7,11 +7,13 @@ Star [] stars;
 Ship lollipop;
 SmallAsteroid [] PopRocks;
 
+int Score;
 //lose condition boolean
 boolean Loser = false;
 
 void setup() {
   size(1500, 1000);
+  
   //array of how many stars
   stars = new Star[100];
   //array of how many asteroids
@@ -36,6 +38,7 @@ void draw() {
 
   //space
   background(0);
+
   //draw loop to make stars appear moving
   for (int i =0; i<stars.length; i++) {
 
@@ -68,6 +71,7 @@ void draw() {
       PopRocks[s].collide(lollipop);
     }
   }
+
   //lose condition
   if (Loser==true) {
     textAlign(CENTER);
@@ -75,5 +79,11 @@ void draw() {
     fill(255, 0, 0);
     //displays GAME OVER when a collision/lose condition is true
     text("GAME OVER", 750, 500);
+    textAlign(LEFT);
   }
+  //Displays Score
+  textMode(CENTER);
+  fill(255);
+  textSize(20);
+  text("Score: " + Score, 20, 20);
 }

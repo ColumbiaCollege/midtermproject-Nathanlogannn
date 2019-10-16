@@ -33,6 +33,8 @@ class SmallAsteroid {
     if (yPos2 > 1000) {
       yPos2 = random(-5000, -300);
       xPos2 = random(width);
+      //adds Score
+      Score++;
     }
   }
 
